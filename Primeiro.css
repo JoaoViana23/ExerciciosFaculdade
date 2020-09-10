@@ -48,6 +48,12 @@ nav ul li a {
 
 header {
     background: #8f3faf;
+    display: flex;
+    flex-direction: column;
+}
+
+header p {
+    margin-bottom: 2em;
 }
 
 header p,
@@ -65,10 +71,6 @@ h3 {
     font-weight: 700;
 }
 
-#alemanha {
-    text-align: center;
-}
-
 div h3 {
     font-weight: 900;
 }
@@ -79,12 +81,42 @@ div {
     background-color: #4d4d4d;
 }
 
-section {
-    padding: 20px;
-}
-
 footer ul {
     list-style: none;
     padding: 10px;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav ul {
+        flex-direction: row;
+        width: 70%;
+    }
+    header {
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+    #corpo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto
+    }
+    #corpo h3 {
+        text-align: center;
+        width: 100%;
+    }
+    #rodape ul li {
+        flex-direction: row;
+        flex-direction: wrap;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
